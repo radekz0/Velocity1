@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+    <font color="#008000">
+        <h2>Messenger</h2>
+        <p>Messenger Radka > wszystkie inne messengery.</p>
+    </font>
+    <form action="/action_page.php">
+        <textarea disabled name="message" rows="30" cols="100">${message}</textarea>
+        <br>
+        <textarea name="input" rows="5" cols="100"></textarea>
+        <br>
+        <input type="submit">
+    </form>
+</center>
+</body>
+</html>
