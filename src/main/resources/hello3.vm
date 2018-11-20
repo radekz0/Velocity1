@@ -5,11 +5,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         function fun(){
-            const getUsers = () => {
-                return fetch("https://jsonplaceholder.typicode.com/users")
-                        .then(resp => JSON.stringify(resp.json()))
-            }
-            $("#div1").html(getUsers());
+            getJson().then(resp => $("#div1").html(JSON.stringify(resp)));
+        }
+
+        function getJson(){
+            return fetch("https://jsonplaceholder.typicode.com/users")
+                    .then(resp => resp.json())
         }
     </script>
 </head>
