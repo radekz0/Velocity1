@@ -1,18 +1,15 @@
 <!DOCTYPE html>
+<!--suppress ALL -->
 <html>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         function fun(){
-
-            $.getJSON( "https://jsonplaceholder.typicode.com/todos/1", function( data ) {
-                var items = [];
-                $.each( data, function( key, val ) {
-
-                    items.push( key + " " + val +"</br>");
-                });
-                $( "#div1").html(items);
-            });
+            const getUsers = () => {
+                return fetch("https://jsonplaceholder.typicode.com/users")
+                        .then(resp => JSON.stringify(resp.json()))
+            }
+            $("#div1").html(getUsers());
         }
     </script>
 </head>

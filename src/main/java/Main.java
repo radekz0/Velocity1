@@ -30,7 +30,7 @@ public class Main {
             model.put("message",templateVariable);
 
             return new VelocityTemplateEngine().render(
-                    new ModelAndView(model, "hello.vm")
+                    new ModelAndView(model, "hello3.vm")
             );
         });
     }
