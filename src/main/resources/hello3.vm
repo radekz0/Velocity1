@@ -5,12 +5,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         function fun(){
-            getJson().then(resp => $("#div1").html(JSON.stringify(resp)));
+            getJson2().then(resp => $("#div1").html(JSON.stringify(resp)));
         }
 
         function getJson(){
             return fetch("https://jsonplaceholder.typicode.com/users")
                     .then(resp => resp.json())
+        }
+
+        function getJson2(){
+            const x = getJson().then(resp => {
+                resp.forEach(el => {
+                var obj = new Object();
+                const {
+                    id = "",
+                    name = "",
+                } = el;
+            obj.id = id;
+            obj.name  = name;
+            console.log(id, name);
+        });
+        });
         }
     </script>
 </head>
