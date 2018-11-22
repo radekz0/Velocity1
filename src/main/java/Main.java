@@ -25,7 +25,7 @@ public class Main {
 //        System.out.println(writer);
         // do this
         get("template-example", (req, res) -> {
-            String templateVariable = "Jestę programistę";
+            String templateVariable = "Hello!";
             Map<String, Object> model = new HashMap<>();
             model.put("message",templateVariable);
 
